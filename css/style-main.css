@@ -1,0 +1,323 @@
+:root{
+  --accent-color: #0000008c; /* color of "west-ward on steam" and the social links in footer */
+  --accent-hover: #ffffff00;
+  --accent-button: #ffee00;
+  --steam-button-h: 70px;
+  --steam-button-w: 200px;
+}
+* {
+  box-sizing: border-box;
+}
+html, body {
+    margin: 0; 
+    padding: 0;
+    font-family: 'Jost';
+  }
+
+a {
+  text-decoration: none;
+}
+h1, h2, h3, h4, h5 {
+  font-weight: lighter;
+  font-family: "satisfy", cursive;
+  text-align: center;
+  border: none;
+}
+h3{
+  font-size: calc(30px + 1vw);
+}
+h4 {
+  font-size: calc(20px + 1vw);
+}
+
+.halign{
+  text-align: center;
+}
+
+.bg-img {
+  /* The image used */
+  background-image: url("../img/banner.png");
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+/* The navbar */
+.topnav {
+  min-height: 380px;
+  overflow: hidden;
+  text-align: center;
+}
+/* Navbar links */
+.topnav a {
+  margin-top: 25px;
+  display: inline-block;
+  float: none;
+  color: black;
+
+
+  text-align: center;
+  min-width: 50px;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+.topnav a:hover {
+  color: #f2f2f2;
+  text-shadow: 1px 1px 5px black; /*NAV MENU TEXT SHADOW*/
+}
+/*dropdown button (games)*/
+.dropbtn {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f2f2f2; /*background color of the dropdown buttons before hover*/
+  z-index: 1;
+}
+.dropdown-content a {
+  text-align: left;
+  color: black; /*color of the text in dropdown buttons before hover*/
+  margin:0;
+  padding: 14px 16px;
+  font-size: 17px;
+  min-width: 160px;
+  display: block;
+}
+.dropdown-content a:hover {
+    background-color: #ddd; /*background color of the dropdown buttons after hover*/
+    color: black; /*color of the text in dropdown buttons after hover*/
+    text-shadow: none;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/*for the banner title -- it's just font*/
+.topnav h3 {
+    font-weight: lighter;
+    font-family: "satisfy", cursive;
+    font-size: 60px;
+    margin-top: 15px;
+    margin-bottom: 110px;
+    border: none;
+    text-align: center;
+  }
+
+/* "westward on steam" on homepage */  
+.boxed-btn4 {/*not mine*/
+    height: var(--steam-button-h);  
+    width: var(--steam-button-w);
+    background-color: var(--accent-color);  
+
+    letter-spacing: 1.5px;
+    box-shadow: 0px 0px 2px 2.5px black; /*border looking thing. the first two values is h-offset/v-offset. third value is blur. fourth is size.*/
+   
+    display: inline-block;
+    text-align: center;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  .boxed-btn4 a{
+    color: #fff;
+    text-shadow: none;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+  }
+  .boxed-btn4:hover a{ /*this is the "West-Ward on Steam" text & bg when hovered on*/
+    color: var(--accent-button);
+    text-shadow: 1px 1px #000000;
+    background-color: var(--accent-hover);
+  }
+  .boxed-btn4:hover i.fa-steam::before{ /*this is the thing that changes the steam icon color on hover*/
+    color: var(--accent-button);
+    text-shadow: 1px 1px #000000;
+  }
+  .boxed-btn4 i.fa-steam::before { /*to make sure that the steam icon is white and not the grey color from the footer */
+    color: white;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+  }
+.steamButton{
+  height: var(--steam-button-h);  
+  width: var(--steam-button-w);
+  display: flex!important;
+  align-items: center;
+  justify-content: center;
+  line-height: 0.5em;
+  overflow: hidden;
+}
+.steamButton .fa-steam{
+  font-size: 40px;
+  margin-RIGHT: 10px;
+  border: 0;
+}
+.steamText{
+  border: 0;
+  margin: 0;  
+  padding: 0;
+  text-align: left;
+}
+.steamText h5 {
+  margin-block-start: 15;
+  margin-block-end: 0;
+
+  font-size: 20px;
+  font-weight: lighter;
+
+}
+.steamText p{
+  font-size: 12p;
+  padding-bottom: 15px;
+}
+
+
+
+
+/* body */
+#body {
+    width:100%;
+}
+#container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    margin: calc(70px + 1vw) 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.col {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* image */
+.gameIcon{
+    width: 20vw;
+    height: 20vw;
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    -webkit-transition: 0.85s; 
+    -moz-transition: 0.85s;
+    -o-transition: 0.85s;
+    transition: .85s;
+}
+.gameIcon img {
+    opacity: 1;
+    width: 100%;
+    height: auto;
+
+
+}
+.gameIcon:hover{ /*change to .gameIcon:hover if you dont want the whole thing to be hoverable*/
+    opacity: .7;
+    cursor: pointer;
+}
+
+/* text under img */
+.maintext {
+    text-align: center;
+    word-wrap: break-word;
+    width: 20vw;
+    max-width: 300px;
+    color: black;
+}
+.maintext h3 {
+    font-size: calc(20px + 1vw);
+    margin-bottom: 0px;
+    text-decoration: none;
+
+}
+
+
+
+/* footer */
+#footer {
+    margin: 0;
+    padding: 0 3vw;
+    background-color: black;
+    width: 100%;
+    height: calc(75px + 3vw);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.credits {
+    text-align: center;
+    display: flex;
+}
+.credits p{
+    font-size: calc(8px + .5vw);
+    color: #d3d3d3;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.social {
+    display: flex;
+}
+i::before{ /*gets rid of weird underline for icons*/
+    display: inline-block;
+    text-decoration: none;
+    color: #d3d3d3;
+}
+.icon {
+    width: 3vw;
+    height: 3vw;
+    font-size: 2vw;
+    color: #d3d3d3;
+    margin: 5px;
+    background-color: rgb(44, 44, 44);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    -webkit-transition: 0.85s;
+    -moz-transition: 0.85s;
+    -o-transition: 0.85s;
+    transition: .85s;
+}
+.icon:hover {
+    background-color: var(--accent-color);
+}
+/*.fa-twitter, .fa-steam, .fa-youtube, .fa-twitch{
+
+}
+.fa-steam:hover, .fa-twitter:hover, .fa-twitch:hover, .fa-youtube:hover{
+    color: white;
+}*/

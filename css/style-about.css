@@ -1,0 +1,57 @@
+.abouttext {
+    margin: 0;
+    text-align: center;
+    word-wrap: break-word;
+    width: 60vw;
+  }
+  .abouttext h3 {
+    margin-block-start: 0px;
+    margin-block-end: 1vw;
+  }
+.contacttext {
+    margin: 0;
+    text-align: center;
+    word-wrap: break-word;
+    width: 60vw;
+  }
+  .contacttext h3 {
+    margin-block-start: 20px;
+    margin-block-end: 1vw;
+  }
+  .contacttext a {
+    display: inline-block;
+  }
+  .contacttext .icon {
+    max-width: 60px;
+    min-height: 40px;
+    min-width: 40px;
+    font-size: calc(20px + .5vw);
+  }
+  .contacttext .icon:hover {
+    background-color: transparent;
+  }
+  .contacttext .icon:hover i::before{
+    color: black;
+  }
+.email {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: flex-start;
+}
+.email h3 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  text-align: left;
+  font-size: 20px;
+
+}
+.email p{
+  text-align: left;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+.email i{
+  font-size: 27px;
+  margin-right: 20px;
+}
