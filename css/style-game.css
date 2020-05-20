@@ -1,3 +1,14 @@
+.boxed-btn4 i.fa-steam::before { 
+    /*to make sure that the steam icon is white and not the grey color from the footer 
+    ALSO the fucking icon will now be in sync with the text of the button... 
+    I had to make the transitions set to 0 on this page and have it different on the main page for whatever reason*/
+    color: white;
+    -webkit-transition: 0s;
+    -moz-transition: 0s;
+    -o-transition: 0s;
+    transition: 0s;
+  }
+
 .adenoid-bg-img {
     /* The image used */
     background-image: url("../img/adenoid_banner.png"); /* the banner image*/

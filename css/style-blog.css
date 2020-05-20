@@ -47,10 +47,12 @@
     }
 }
 
+
 /* blog entry stuff */
 .blog {
     margin: 0 12vw; 
     padding: 2vw;
+    overflow: hidden;
 }
 .blog h1, h2, h3, h4, h5 {
     font-family: 'Poppins', sans-serif;
@@ -62,7 +64,7 @@
     border-bottom: 2px solid black; /* the underline that separates the title from the description */
 
 }
-.blog h5 {
+.blog h5 { /* used as subtitle */
     text-indent: 40px; /*remove if aligning center and/or add text-align: center; */
     font-size: calc(15px + 0.5vw);
     padding-top: calc(10px + 1vw);
@@ -78,16 +80,20 @@
 .blog p:first-of-type{
     margin-block-start: 4vw;
 }
-.blog h4 {
-    text-align: left; /*remove if centered title desired*/
+.blog h4 { /* used as title of post */
     margin-block-start: 20px;
     margin-block-end: 0;
     margin-inline-start: 0px;
     margin-inline-end: 0;
+    text-align: left; /*remove if centered title desired*/
     font-size: calc(20px + 1vw);
-
     border-bottom: 2px solid black; /* the underline that separates the title from the description */
     padding-bottom: 20px;
+}
+@media screen and (min-width: 1000px) {
+    .blog p {
+        font-size: 20px;
+    }
 }
 
 /* media stuff (imgs/videos) */
@@ -113,19 +119,22 @@ iframe {
 /* resizing stuff */
 @media screen and (max-width: 500px) {
     .blog {
-        margin: 0 0px;
+        margin: 0 50px;
         padding: 0;
     }
     .blog h4, p {
         margin: 0 20px;
     }
-    .blog .left, .right {
+    .blog .left, .blog .right {
         float: none;
         max-height: 50vh;
         max-width: 50vw;
     }
+    .left, .right {
+        margin-left: 0;
+    }
     .blog img {
-        max-width: 450px;
+        max-width: 350px;
     }
     iframe {
         width: 480px;
