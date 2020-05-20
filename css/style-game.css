@@ -9,7 +9,12 @@
     transition: 0s;
   }
 
-.adenoid-bg-img {
+  /*note: if you add more game pages:
+  1. copy-paste ".adenoid-bg-img" to create a copy to modify,
+  2. change the name to ".name-bg-img", 
+  3. change the banner image link,
+  4. Finally, in the html page right under the navigation start comment, change the div class from bg-img or adenoid-bg-img to the new name*/
+.adenoid-bg-img { 
     /* The image used */
     background-image: url("../img/adenoid_banner.png"); /* the banner image*/
     min-height: 380px;
@@ -74,8 +79,15 @@ iframe {
     flex-direction: row;
     justify-content: center;
 }
+.colg:first-child {
+    max-width: 100%;
+    width: unset;
+    display: flex;
+    flex-direction: column;
+}
 .colg{
     max-width: 100%;
+    width: 400px;
     display: flex;
     flex-direction: column;
 }
