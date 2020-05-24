@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 html, body {
-    margin: 0; 
+    margin: 0;
     padding: 0;
     font-family: 'Jost'; /* the default font for all text */
   }
@@ -132,15 +132,15 @@ h4 {
     text-align: center;
   }
 
-/* "westward on steam" on homepage */  
+/* "westward on steam" on homepage */
 .boxed-btn4 {/*not mine*/
-    height: var(--steam-button-h);  
+    height: var(--steam-button-h);
     width: var(--steam-button-w);
-    background-color: var(--accent-color);  
+    background-color: var(--accent-color);
 
     letter-spacing: 1.5px;
     box-shadow: 0px 0px 2px 2.5px black; /*border looking thing. the first two values is h-offset/v-offset. third value is blur. fourth is size.*/
-   
+
     display: inline-block;
     text-align: center;
     -webkit-transition: 0.7s;
@@ -164,7 +164,7 @@ h4 {
     text-shadow: 1px 1px #000000;
     background-color: var(--accent-hover);
   }
- 
+
   .boxed-btn4 i.fa-steam::before { /*to make sure that the steam icon is white and not the grey color from the footer */
     color: white;
     -webkit-transition: 0.5s;
@@ -172,9 +172,9 @@ h4 {
     -o-transition: 0.5s;
     transition: 0.5s;
   }
-  
+
 .steamButton{
-  height: var(--steam-button-h);  
+  height: var(--steam-button-h);
   width: var(--steam-button-w);
   display: flex!important;
   align-items: center;
@@ -189,7 +189,7 @@ h4 {
 }
 .steamText{
   border: 0;
-  margin: 0;  
+  margin: 0;
   padding: 0;
   text-align: left;
 }
@@ -215,7 +215,7 @@ h4 {
 }
 #container {
     width: 100%;
-} 
+}
 
 .row {
     margin: calc(70px + 1vw) 50px;
@@ -253,7 +253,7 @@ h4 {
     min-height: 200px;
     border-radius: 50%;
     overflow: hidden;
-    -webkit-transition: 0.85s; 
+    -webkit-transition: 0.85s;
     -moz-transition: 0.85s;
     -o-transition: 0.85s;
     transition: .85s;
