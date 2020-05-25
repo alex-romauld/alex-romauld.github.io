@@ -300,6 +300,11 @@ h4 {
     justify-content: space-between;
     align-items: center;
 }
+.stickyfoot {
+  bottom: 0;
+  left:0;
+  position: fixed;
+}
 .credits {
     text-align: center;
     display: flex;
