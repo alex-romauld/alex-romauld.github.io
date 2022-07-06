@@ -57,12 +57,13 @@
 
               <h5>Planet Generation</h5>
               <p>I wanted this game to be spatially infinite, so I was excited to start experimenting with generating planets.</p>
+			  <img src="res/adenoid_planets.gif">
 			  <p>Initially my approach was to subdivide an icosphere. This turned out to be a bad idea for several reasons: Culling, texture mapping, and no granularity in detail. Increasing the detail requires a whole extra subdivision, which increases the number of vertices exponentially.</p>
 			  <p>The current approach is to generate a cube and extrude each vertex to a constant radius from the center. This was good because vertices could be drawn in a clockwise order so that entire faces of this “rounded cube” could be culled, textures are straight forward to map to each face, and there’s finer control over poly count.</p>
 
 			  <h5>Replay System</h5>
 			  <p>The replay system has been an invaluable asset for development. Each run of the game can be saved and played back. It’s useful for reproducing bugs as well as playtesting. My style of playtesting is generally hands-off, to let people have their own unmonitored experience with the game, so being able to examine a play session after the fact has been quite informative.</p>
-			  <img src="../img/banner.png">
+			  <img src="res/adenoid_replay.gif">
 			  <p>Like every game, the simulation is stepped in fixed increments:</p>
 
 			  <div align="left">
@@ -78,13 +79,16 @@
 			  </div>
 
 			  <p>There are many reasons this is done, and determinism is one of them. Meaning the same inputs on the same ticks will yield the same result. Thankfully the user inputs into the game are very simple, the player can tether onto an entity or release it.</p>
-			  <p>All that’s left to do is to save the tethered entity each time it changes and note the tick it happened on. Then in playback, force the user to tether to the tether onto that particular entity.</p>
+			  <img src="res/adenoid_replay_records.png">
+			  <p>All that’s left to do is to save the ID of the tethered entity each time it changes and note the tick it happened on. Then in playback, force the user to tether to the tether onto that particular entity.</p>
 
 			  <h5>Pre-Optimizing Star Systems</h5>
 			  <p>There are an infinite number of galaxies, each containing many star systems, each star system containing planets and thousands of asteroids. Initially the thought was that a galaxy might contain thousands of star systems, and handling all this data would be infeasible without some clever solution.</p>
+			  <img src="res/adenoid_debug.gif">
 
 			  <h5>Aim-Assist</h5>
-			  <p>Selecting the entity you want to target like many games, requires some level of dexterity with the mouse. However, this game is at its most interesting when it’s about using the tether well, and less about being good with the mouse. For this reason, I’ve implemented a slow-mo as well as an tunable aim-assist.</p>
+			  <p>Selecting the entity you want to target like many games, requires some level of dexterity with the mouse. However, this game is at its most interesting when it’s about using the tether well, and less about being good with the mouse. For this reason, I’ve implemented a slow-mo as well as a tunable aim-assist.</p>
+			  <img src="res/adenoid_aimassist.gif">
 			  <p>The aim assist works by first casting a ray out from the camera, then finding the closest point on each planet to this ray. This is superior to just using a cone and comparing based on distance. With this approach, the closest thing to what the player was actually aiming at is what gets picked.</p>
             </div>
           </div>

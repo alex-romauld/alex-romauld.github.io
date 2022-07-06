@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<!-- Main Style Sheet -->
+	<link rel="stylesheet" href="../css/style-main.css">
+	<!-- Blog Style Sheet-->
+	<link rel="stylesheet" href="../css/style-blog.css">
+
+	<!-- Fonts -->
+    <!-- title -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy">
+    <!-- body -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
+    <!--entry-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+	<!-- Icons -->
+    <!-- steam -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Alex - Portfolio</title> <!-- the name in the browser bar -->
+	<link rel="icon" href="../img/client_icon.ico">
+  </head>
+
+  <body>
+	<!-- Navagation Start -->
+	<div class="bg-img">
+      <div class="topnav">
+		<a href="../index.html">Home</a>
+		<div class="dropdown">
+          <button class="dropbtn"><a href="#">Games</a></button>
+          <div class="dropdown-content">
+            <a href="../west-ward.html">West-Ward</a>
+            <a href="../adenoid.html">Adenoid</a>
+          </div>
+		</div>
+		<a href="../contact.html">Contact</a>
+
+	  </div>
+	</div>
+	<!-- Navagation End -->
+
+	<!-- Body Start -->
+
+	<!-- h4    = title -->
+	<!-- h5    = subtitle -->
+	<!-- p     = normal text -->
+	<!-- video = default youtube embed -->
+
+	<div id="body">
+	  <div id="container">
+		<div class="row"> <!-- each page should have "body > container > row > col > blog halign" for formatting purposes-->
+          <div class="col">
+            <div class="blog halign"> <!-- make sure you use "blog halign" so that the formatting works properly -->
+              <h4>Hell's Janitors</h4>
+			  <br>
+			  <iframe width="560" height="315" src="https://www.youtube.com/embed/FMK9Qu5vMWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			  <p>A multiplayer zombie shooter. I wrote this in junior year high school in C#, XNA. This is still available on game jolt</p>
+
+			  <img src="res/hj_1.png">
+			  <p>Players can set and activate traps, spend points, and use abilities. They can place entities in the world that attack zombies or assist allies.</p>
+
+			  <img src="res/hj_2.png">
+			  <p>The zombies needed to be able to path from the dirt-holes they crawl out of, to wherever the player is. Each tile in the world is treated as a node linked to its neighboring tiles. An A* search is performed until the zombie can freely move towards the player without bumping into anything. An additional constraint is that certain areas are unreachable by the player until those areas are unlocked. To account for this, each time a door is opened or glass gets broken, the dirt holes perform a path find to the player to see if they should activate.</p>
+
+			  <img src="res/hj_splitscreen.png">
+			  <p>Featuring four player splitscreen, the goal was to survive </p>
+
+			  <img src="res/hj_editor.png">
+			  <p>The game shipped with an editor for players to make and share levels. Every level in the game was built using this editor. Tools are valuable!</p>
+            </div>
+          </div>
+		</div>
+	  </div>
+	</div>
+	<!-- body end -->
+
+	<!-- footer start -->
+	<div id="footer">
+	  <div class="credits">
+		<p>Copywrite Â© 2020 All rights reserved. | Website created by Stephanie Schaem.</p>
+	  </div>
+	  <div class="social">
+		<!-- steam icon -->
+		<a href="https://store.steampowered.com/search/?term=alex+romauld">
+		  <div class="icon">
+			<i class="fa fa-steam"></i>
+		  </div>
+		</a>
+		<!-- twitch icon -->
+		<a href="https://www.twitch.tv/auditoriumjohnson">
+		  <div class="icon">
+			<i class="fa fa-twitch"></i>
+		  </div>
+		</a>
+		<!-- twitter icon -->
+		<a href="https://twitter.com/ARomauld">
+		  <div class="icon">
+			<i class="fa fa-twitter"></i>
+		  </div>
+		</a>
+		<!-- youtube icon -->
+		<a href="https://www.youtube.com/user/AJspartan">
+		  <div class="icon">
+			<i class="fa fa-youtube"></i>
+		  </div>
+		</a>
+	  </div>
+
+
+	</div>
+	<!-- footer end -->
+  </body>
+</html>
+<script> </script>
