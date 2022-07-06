@@ -245,7 +245,13 @@ h4 {
 
 /* image */
 .gameIcon{
-    width: 20vw;
+    -webkit-transition: 0.85s;
+    -moz-transition: 0.85s;
+    -o-transition: 0.85s;
+    transition: .25s;
+}
+.gameIcon img {
+	width: 20vw;
     height: 20vw;
     max-width: 300px;
     max-height: 300px;
@@ -253,17 +259,10 @@ h4 {
     min-height: 200px;
     border-radius: 50%;
     overflow: hidden;
-    -webkit-transition: 0.85s;
-    -moz-transition: 0.85s;
-    -o-transition: 0.85s;
-    transition: .85s;
-}
-.gameIcon img {
+
     opacity: 1;
     width: 100%;
     height: auto;
-
-
 }
 .gameIcon:hover{ /*change to .gameIcon:hover if you dont want the whole thing to be hoverable*/
     opacity: .7;
@@ -271,7 +270,7 @@ h4 {
 }
 
 /* text under img */
-.maintext {
+.gameIcon {
     text-align: center;
     word-wrap: break-word;
     width: 20vw;
@@ -280,13 +279,12 @@ h4 {
     max-width: 300px;
     color: black;
 }
-.maintext h3 {
+.gameIcon h3 {
     font-size: calc(20px + 1vw);
     margin-bottom: 0px;
     text-decoration: none;
 
 }
-
 
 
 /* footer */

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<!-- Main Style Sheet -->
+	<link rel="stylesheet" href="../css/style-main.css">
+	<!-- Blog Style Sheet-->
+	<link rel="stylesheet" href="../css/style-blog.css">
+
+	<!-- Fonts -->
+    <!-- title -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Satisfy">
+    <!-- body -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost">
+    <!--entry-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins" rel="stylesheet">
+	<!-- Icons -->
+    <!-- steam -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Alex - Portfolio</title> <!-- the name in the browser bar -->
+	<link rel="icon" href="../img/client_icon.ico">
+  </head>
+
+  <body>
+	<!-- Navagation Start -->
+	<div class="bg-img">
+      <div class="topnav">
+		<a href="../index.html">Home</a>
+		<div class="dropdown">
+          <button class="dropbtn"><a href="#">Games</a></button>
+          <div class="dropdown-content">
+            <a href="../west-ward.html">West-Ward</a>
+            <a href="../adenoid.html">Adenoid</a>
+          </div>
+		</div>
+		<a href="../contact.html">Contact</a>
+
+	  </div>
+	</div>
+	<!-- Navagation End -->
+
+	<!-- Body Start -->
+
+	<!-- h4    = title -->
+	<!-- h5    = subtitle -->
+	<!-- p     = normal text -->
+	<!-- video = default youtube embed -->
+
+	<div id="body">
+	  <div id="container">
+		<div class="row"> <!-- each page should have "body > container > row > col > blog halign" for formatting purposes-->
+          <div class="col">
+            <div class="blog halign"> <!-- make sure you use "blog halign" so that the formatting works properly -->
+              <h4>Adenoid</h4>
+              <p>Adenoid is a 3D procedurally generated infinite space game where the universe can be examined at nearly any scale, written from scratch in c++/OpenGL. It Began its life as an evolution of a previous project “Don’t Die Pluto”. The player tethers onto celestial bodies to swing around the universe, accruing mass, avoiding hazards, and uncovering secrets.</p>
+
+              <h5>Planet Generation</h5>
+              <p>I wanted this game to be spatially infinite, so I was excited to start experimenting with generating planets.</p>
+			  <p>Initially my approach was to subdivide an icosphere. This turned out to be a bad idea for several reasons: Culling, texture mapping, and no granularity in detail. Increasing the detail requires a whole extra subdivision, which increases the number of vertices exponentially.</p>
+			  <p>The current approach is to generate a cube and extrude each vertex to a constant radius from the center. This was good because vertices could be drawn in a clockwise order so that entire faces of this “rounded cube” could be culled, textures are straight forward to map to each face, and there’s finer control over poly count.</p>
+
+			  <h5>Replay System</h5>
+			  <p>The replay system has been an invaluable asset for development. Each run of the game can be saved and played back. It’s useful for reproducing bugs as well as playtesting. My style of playtesting is generally hands-off, to let people have their own unmonitored experience with the game, so being able to examine a play session after the fact has been quite informative.</p>
+			  <img src="../img/banner.png">
+			  <p>Like every game, the simulation is stepped in fixed increments:</p>
+
+			  <div align="left">
+				<pre><code>
+			if (program_mode == GAME) {
+				simulation_timer += dt * simulation_speed;
+				while (simulation_timer &#x3E;= SIMULATION_TIME_STEP) {
+					sim.step_simulation(SIMULATION_TIME_STEP);
+					simulation_timer -= SIMULATION_TIME_STEP;
+				}
+			}
+				</code></pre>
+			  </div>
+
+			  <p>There are many reasons this is done, and determinism is one of them. Meaning the same inputs on the same ticks will yield the same result. Thankfully the user inputs into the game are very simple, the player can tether onto an entity or release it.</p>
+			  <p>All that’s left to do is to save the tethered entity each time it changes and note the tick it happened on. Then in playback, force the user to tether to the tether onto that particular entity.</p>
+
+			  <h5>Pre-Optimizing Star Systems</h5>
+			  <p>There are an infinite number of galaxies, each containing many star systems, each star system containing planets and thousands of asteroids. Initially the thought was that a galaxy might contain thousands of star systems, and handling all this data would be infeasible without some clever solution.</p>
+
+			  <h5>Aim-Assist</h5>
+			  <p>Selecting the entity you want to target like many games, requires some level of dexterity with the mouse. However, this game is at its most interesting when it’s about using the tether well, and less about being good with the mouse. For this reason, I’ve implemented a slow-mo as well as an tunable aim-assist.</p>
+			  <p>The aim assist works by first casting a ray out from the camera, then finding the closest point on each planet to this ray. This is superior to just using a cone and comparing based on distance. With this approach, the closest thing to what the player was actually aiming at is what gets picked.</p>
+            </div>
+          </div>
+		</div>
+	  </div>
+	</div>
+	<!-- body end -->
+
+	<!-- footer start -->
+	<div id="footer">
+	  <div class="credits">
+		<p>Copywrite Â© 2020 All rights reserved. | Website created by Stephanie Schaem.</p>
+	  </div>
+	  <div class="social">
+		<!-- steam icon -->
+		<a href="https://store.steampowered.com/search/?term=alex+romauld">
+		  <div class="icon">
+			<i class="fa fa-steam"></i>
+		  </div>
+		</a>
+		<!-- twitch icon -->
+		<a href="https://www.twitch.tv/auditoriumjohnson">
+		  <div class="icon">
+			<i class="fa fa-twitch"></i>
+		  </div>
+		</a>
+		<!-- twitter icon -->
+		<a href="https://twitter.com/ARomauld">
+		  <div class="icon">
+			<i class="fa fa-twitter"></i>
+		  </div>
+		</a>
+		<!-- youtube icon -->
+		<a href="https://www.youtube.com/user/AJspartan">
+		  <div class="icon">
+			<i class="fa fa-youtube"></i>
+		  </div>
+		</a>
+	  </div>
+
+
+	</div>
+	<!-- footer end -->
+  </body>
+</html>
+<script> </script>
