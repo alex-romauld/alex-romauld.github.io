@@ -85,7 +85,7 @@
     margin-block-end: 0;
     margin-inline-start: 0px;
     margin-inline-end: 0;
-    text-align: left; /*remove if centered title desired*/
+    text-align: center; /*remove if centered title desired*/
     font-size: calc(20px + 1vw);
     border-bottom: 2px solid black; /* the underline that separates the title from the description */
     padding-bottom: 20px;
@@ -98,9 +98,11 @@
 
 /* media stuff (imgs/videos) */
 iframe {
-    width: 560px;
-    height: 315px;
+    width: 100%;
+	height: auto;
+    aspect-ratio: 16 / 9;
 }
+
 .blog .left {
     float: left;
     clear: left;
