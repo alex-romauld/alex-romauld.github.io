@@ -287,9 +287,9 @@ h4 {
 
 .gameIcon {
 	/* Transition */
-    -webkit-transition: 0.85s;
-    -moz-transition: 0.85s;
-    -o-transition: 0.85s;
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -o-transition: 0.25s;
     transition: .25s;
 
 
@@ -323,7 +323,6 @@ h4 {
     font-size: calc(20px + 1vw);
     margin-bottom: 0px;
     text-decoration: none;
-
 }
 
 
@@ -372,13 +371,16 @@ i::before{ /*gets rid of weird underline for icons*/
     align-items: center;
     justify-content: center;
 
-    -webkit-transition: 0.85s;
-    -moz-transition: 0.85s;
-    -o-transition: 0.85s;
-    transition: .85s;
+    -webkit-transition: 0.25s;
+    -moz-transition: 0.25s;
+    -o-transition: 0.25s;
+    transition: .25s;
+
+	margin-left: 1px;
+	margin-right: 1px;
 }
 .icon:hover {
-    background-color: var(--accent-color);
+    background-color: gray;
 }
 
 /*
