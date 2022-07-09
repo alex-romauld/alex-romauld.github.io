@@ -231,28 +231,6 @@ h4 {
     flex-direction: row;
     justify-content: center;
 }
-.gameTileContainer {
-	max-width: 1800px;
-
-	margin-left: auto;
-	margin-right: auto;
-
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-}
-.gameTile {
-    justify-content: center;
-
-    margin-left: 5vw;
-	margin-right: 5vw;
-	margin-top: 2vw;
-	margin-bottom: 2vw;
-
-	/*border: 5px solid #408080; /* good for debugging game tiles */
-	overflow:hidden;
-}
 
 .col {
     justify-content: center;
@@ -282,8 +260,32 @@ h4 {
 }
 */
 
-.gameIcon{
 
+.gameTileContainer {
+	max-width: 1800px;
+
+	margin-left: auto;
+	margin-right: auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.gameTile {
+    justify-content: center;
+
+    margin-left: 5vw;
+	margin-right: 5vw;
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+
+	/*border: 5px solid #408080; /* good for debugging game tiles */
+	overflow:hidden;
+}
+
+.gameIcon {
 	/* Transition */
     -webkit-transition: 0.85s;
     -moz-transition: 0.85s;
@@ -294,27 +296,12 @@ h4 {
 	justify-content: center;
     text-align: center;
 
-	width: 300px;
+	max-width: 300px;
 	min-height: 200px;
-	/*
-    width: 20vw;
-    min-width: 200px;
-    min-height: 200px;
-    max-width: 300px;
-   */
+
     color: black;
 }
 .gameIcon img {
-	width: 250px;
-    height: 250px;
-	/*
-	width: 20vw;
-    height: 20vw;
-    max-width: 300px;
-    max-height: 300px;
-    min-width: 200px;
-    min-height: 200px;
-   */
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
