@@ -219,6 +219,7 @@ h4 {
 
 /* row not used? */
 .row {
+	margin: 0 8vw;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
