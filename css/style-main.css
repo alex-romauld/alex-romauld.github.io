@@ -217,22 +217,30 @@ h4 {
     width: 100%;
 }
 
+/* row not used? */
 .row {
-    margin: calc(70px + 1vw) 50px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
 }
 .col {
-    max-width: 100%;
-    margin-left: 10vw;
-    display: flex;
-    flex-direction: column;
+    justify-content: center;
+
+
+    margin-left: 5vw;
+	margin-right: 5vw;
+	margin-top: 2vw;
+	margin-bottom: 2vw;
+
+
+
+
+	/*border: 5px solid #408080; /* good for debugging game tiles */
+	overflow:hidden;
 }
-.col:first-child {
-  margin-left: 0;
-}
+
+/*
 @media screen and (max-width: 550px) {
   .row {
     justify-content: space-between;
@@ -242,43 +250,58 @@ h4 {
     margin-right: auto;
   }
 }
+*/
 
-/* image */
 .gameIcon{
+
+	/* Transition */
     -webkit-transition: 0.85s;
     -moz-transition: 0.85s;
     -o-transition: 0.85s;
     transition: .25s;
+
+
+	justify-content: center;
+    text-align: center;
+
+	width: 300px;
+	min-height: 200px;
+	/*
+    width: 20vw;
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 300px;
+   */
+    color: black;
 }
 .gameIcon img {
+	width: 250px;
+    height: 250px;
+	/*
 	width: 20vw;
     height: 20vw;
     max-width: 300px;
     max-height: 300px;
     min-width: 200px;
     min-height: 200px;
+   */
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	height: auto;
+
     border-radius: 50%;
     overflow: hidden;
-
+	justify-content: center;
     opacity: 1;
-    width: 100%;
-    height: auto;
+
 }
 .gameIcon:hover{ /*change to .gameIcon:hover if you dont want the whole thing to be hoverable*/
     opacity: .7;
     cursor: pointer;
 }
 
-/* text under img */
-.gameIcon {
-    text-align: center;
-    word-wrap: break-word;
-    width: 20vw;
-    min-width: 200px;
-    min-height: 200px;
-    max-width: 300px;
-    color: black;
-}
 .gameIcon h3 {
     font-size: calc(20px + 1vw);
     margin-bottom: 0px;
@@ -326,7 +349,7 @@ i::before{ /*gets rid of weird underline for icons*/
     height: 3vw;
     font-size: 2vw;
     color: #d3d3d3;
-    margin: 5px;
+
     background-color: rgb(44, 44, 44);
     display: flex;
     align-items: center;
@@ -341,10 +364,11 @@ i::before{ /*gets rid of weird underline for icons*/
     background-color: var(--accent-color);
 }
 
-@media screen and (min-width: 1500px) { /*the way I'm giving the desired margins for "desktop" mode*/
+/*
+@media screen and (min-width: 1500px) { /*the way I'm giving the desired margins for "desktop" mode*//*
   #container {
     width: 75vw;
     margin-left: auto;
     margin-right: auto;
   }
-}
+}*/
