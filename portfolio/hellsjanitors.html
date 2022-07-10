@@ -66,7 +66,7 @@
 			  <p>The zombies needed to be able to path from the dirt-holes they crawl out of, to wherever the player is. Each tile in the world is treated as a node linked to its neighboring tiles. An A* search is performed until the zombie can freely move towards the player without bumping into anything. An additional constraint is that certain areas are unreachable by the player until those areas are unlocked. To account for this, each time a door is opened or glass gets broken, the dirt holes perform a search to the player to see if they should activate.</p>
 
 			  <img src="res/hj_splitscreen.png">
-			  <p>The game can be played with up to four players in split-screen mode. Each zombie finds a path to the nearest alive player. If a zombie happens to catch line of sight with a closer player, it will begin to chase them instead.</p>
+			  <p>The game can be played with up to four players in split-screen mode. Each zombie finds a path to the nearest alive player (euclidean distance). If a zombie happens to catch line of sight with a closer player, it will begin to chase them instead.</p>
 
 			  <img src="res/hj_editor.png">
 			  <p>The game shipped with an editor for players to make and share levels. Every level in the game was built using this editor. Tools are valuable!</p>
