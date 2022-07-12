@@ -71,7 +71,7 @@
     margin-bottom: calc(5px + 1vw)
 }
 .blog p{
-    text-indent: 50px;
+    /*text-indent: 50px;*/
     margin-block-start: 2.5vw;
     margin-block-end: 2.5vw;
     font-size: calc(10px + 1vw);
