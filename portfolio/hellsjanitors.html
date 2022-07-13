@@ -45,23 +45,23 @@
               <h4>Hell's Janitors</h4>
 			  <br>
 			  <iframe width="560" height="315" src="https://www.youtube.com/embed/FMK9Qu5vMWg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			  <p>A multiplayer zombie shooter. I wrote this in junior year high school in C#, XNA. This is still available on
-				<a href="https://gamejolt.com/games/hell-s-janitors/106604#screenshot-196501">game jolt</a>.
+			  <p>A multiplayer zombie shooter. I wrote this in my junior year of high school in C#, XNA. This is still available on
+				<a href="https://gamejolt.com/games/hell-s-janitors/106604#screenshot-196501">Game Jolt</a>.
 			  </p>
 
 			  <img src="res/hj_1.png">
 			  <p>Players needed to survive endless waves of zombies. They can set and activate traps, spend points, use abilities, and place entities in the world that attack zombies or assist allies.</p>
 
 			  <img src="res/hj_2.png">
-			  <p>The zombies needed to be able to path from the dirt-holes they crawl out of, to wherever the player is. Each tile in the world is treated as a node linked to its neighboring tiles. An A* search is performed until the zombie can freely move towards the player without bumping into anything. An additional constraint is that certain areas are unreachable by the player until those areas are unlocked. To account for this, each time a door is opened or glass gets broken, the dirt holes perform a search to the player to see if they should activate.</p>
+			  <p>The zombies needed to be able to path from the dirt holes they crawl out of, to wherever the player is. Each tile in the world is treated as a node linked to its neighboring tiles. An A* search is performed until the zombie can freely move towards the player without bumping into anything. An additional constraint is that certain areas are unreachable by the player until those areas are unlocked. To account for this, each time a door is opened or glass gets broken, the dirt holes perform a search to the player to see if they should activate.</p>
 
 			  <img src="res/hj_splitscreen.png">
 			  <p>The game can be played with up to four players in split-screen mode. Each zombie finds a path to the nearest alive player (euclidean distance). If a zombie happens to catch line of sight with a closer player, it will begin to chase them instead.</p>
 
 			  <img src="res/hj_editor.png">
 			  <p>The game shipped with an editor for players to make and share levels. Every level in the game was built using this editor. Tools are valuable!</p>
-			  <p>Polishing the user-experience of building levels was important. I built out custom graphical interfaces and attempted to keep the process as streamlined as possible. Adjusting prices, spawns, and placements is easy, and users never have to mess with the pathing system.</p>
-			  <p>However, having to tile an entire grass field by hand or place wood throughout an entire building was not only an annoyance for me, but it’s not something you should be asking another user to do. For this scenario I implemented an optional flood fill, where right clicking will replace all neighboring tiles of the same type with the selected tile.</p>
+			  <p>Polishing the user experience of building levels was important. I built out custom graphical interfaces and attempted to keep the process as streamlined as possible. Adjusting the prices, spawns, and placements are easy, and users never have to mess with the pathing system.</p>
+			  <p>However, having to tile an entire grass field by hand or place wood throughout an entire building was not only an annoyance for me, but it’s not something you should be asking another user to do. For this scenario, I implemented an optional flood fill, where right-clicking will replace all neighboring tiles of the same type with the selected tile.</p>
 
 
 			  <img src="res/hj_scifair.jpg">
