@@ -65,7 +65,7 @@
 
 }
 .blog h5 { /* used as subtitle */
-    text-indent: 40px; /*remove if aligning center and/or add text-align: center; */
+    text-indent: 20px; /*remove if aligning center and/or add text-align: center; */
     font-size: calc(15px + 0.5vw);
     padding-top: calc(10px + 1vw);
     margin-bottom: calc(5px + 1vw)

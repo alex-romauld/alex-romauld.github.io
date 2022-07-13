@@ -42,8 +42,8 @@ h4 {
 
 .bg-img {
   /* The image used */
-  background-image: url("../img/banner.png"); /* banner img here!! */
-  min-height: 380px;
+/*  background-image: url("../img/banner.png"); /* banner img here!! */
+  min-height: 180px;
 
   /* Center and scale the image */
   background-position: center;
@@ -303,6 +303,23 @@ h4 {
 	max-width: 300px;
 	min-height: 200px;
 }
+.aboutTile a {
+    display: inline-block;
+}
+.aboutTile .icon {
+    max-width: 60px;
+    min-width: 40px;
+	min-height: 40px;
+    font-size: calc(20px + .5vw);
+	margin: 3px;
+}
+.aboutTile .icon:hover {
+    background-color: lightgray;
+}
+.aboutTile .icon:hover i::before{
+    color: black;
+}
+
 
 .gameTileContainer {
 	max-width: 1800px;
