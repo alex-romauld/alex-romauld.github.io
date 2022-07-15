@@ -44,7 +44,7 @@
           <div class="col">
             <div class="blog halign"> <!-- make sure you use "blog halign" so that the formatting works properly -->
               <h4>Adenoid</h4>
-              <p>Adenoid is a 3D procedurally generated infinite space game where the universe can be examined at almost any scale. It was written from scratch in c++/OpenGL. It began as an evolution of a previous project “Don’t Die Pluto”. The player tethers onto celestial bodies to swing around the universe, accruing mass, avoiding hazards, and uncovering secrets.</p>
+              <p>Adenoid is a 3D procedurally generated infinite space game where the universe can be examined at a variety of scales. It was written from scratch in c++/OpenGL. It began as an evolution of a previous project “Don’t Die Pluto”. The player tethers onto celestial bodies to swing around the universe, accruing mass, avoiding hazards, and uncovering secrets.</p>
 
               <h5>Planet Generation</h5>
               <p>I wanted this game to be spatially infinite, so I was excited to start experimenting with generating planets.</p>
@@ -82,7 +82,7 @@ if (program_mode == GAME) {
 			  <img src="res/adenoid_debug.gif">
 
 			  <figcaption>
-			  <p><I>Each Yellow sphere is a star system, containing planets and asteroids. The distant Gray spheres are galaxies, containing an array of star systems. There is a White “bubble” that surrounds the player where intersecting start systems are considered for update/render, and it is updated/refreshed whenever the player moves out of the Red sphere, recentering around the player.</I></p>
+			  <p><I>Each Yellow sphere is a star system, containing planets and asteroids. The distant Gray spheres are galaxies, containing an array of star systems. There is a White “bubble” that surrounds the player where intersecting star systems are considered for update/render, and it is updated/refreshed whenever the player moves out of the Red sphere, recentering around the player.</I></p>
 			  </figcaption>
 			  </figure>
 			  <p>Each star system was sorted by distance from the player. The key idea here was that on each refresh, this ordering doesn’t change very much, and as we know from computer school, insertion sort works very fast on a mostly sorted array. Having the star systems sorted by distance to the player means once we hit a star system that's outside  our range, we can stop iterating over them because all future systems will be even further away. This means that all the relevant data is contiguous in memory. This will be so fast!</p>
