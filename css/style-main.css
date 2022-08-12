@@ -24,10 +24,11 @@ h1, h2, h3, h4, h5 {
   border: none;
 }
 h3{
-  font-size: calc(30px + 1vw);
+	font-size: 52px;
 }
 h4 {
-  font-size: calc(20px + 1vw);
+	font-size: 42px;
+	/*font-size: calc(20px + 1vw);*/
 }
  /*tools to align things*/
 .halign{
@@ -307,11 +308,11 @@ h4 {
     display: inline-block;
 }
 .aboutTile .icon {
-    max-width: 60px;
-    min-width: 40px;
-	min-height: 40px;
-    font-size: calc(20px + .5vw);
-	margin: 3px;
+	width: 50px;
+	height: 50px;
+	font-size: 30px;
+
+	margin: 1px;
 }
 .aboutTile .icon:hover {
     background-color: lightgray;
@@ -339,13 +340,8 @@ h4 {
 	/*
 	  These margins keep growing even after the gameTileContainer's width maxes out.
 	  As the width of the screen grows, less tiles will be able to fit in the container.
-	  Need some sort of max-margin parameter.
-
-    margin-left: 5vw;
-	margin-right: 5vw;
-	margin-top: 2vw;
-	margin-bottom: 2vw;
- */
+	  The min acts as a sort of max-margin parameter.
+   */
 	margin-left: min(5vw, 90px);
 	margin-right: min(5vw, 90px);
 	margin-top: min(2vw, 20px);
@@ -403,7 +399,8 @@ h4 {
     padding: 0 3vw;
     background-color: black;
     width: 100%;
-    height: calc(75px + 3vw);
+    /*height: calc(75px + 3vw);*/
+	height: 130px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -418,7 +415,8 @@ h4 {
     display: flex;
 }
 .credits p{
-    font-size: calc(8px + .5vw);
+    /*font-size: calc(8px + .5vw);*/
+	font-size: 18px;
     color: #d3d3d3;
     background-color: rgba(0, 0, 0, 0);
 }
@@ -434,7 +432,12 @@ i::before{ /*gets rid of weird underline for icons*/
 .icon {
     width: 3vw;
     height: 3vw;
-    font-size: 2vw;
+    font-size: min(2vw, 38px);
+
+
+	max-width: 50px;
+	max-height: 50px;
+
     color: #d3d3d3;
 
     background-color: rgb(44, 44, 44);
