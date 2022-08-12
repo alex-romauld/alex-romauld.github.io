@@ -336,10 +336,21 @@ h4 {
 .gameTile {
     justify-content: center;
 
+	/*
+	  These margins keep growing even after the gameTileContainer's width maxes out.
+	  As the width of the screen grows, less tiles will be able to fit in the container.
+	  Need some sort of max-margin parameter.
+
     margin-left: 5vw;
 	margin-right: 5vw;
 	margin-top: 2vw;
 	margin-bottom: 2vw;
+ */
+	margin-left: min(5vw, 90px);
+	margin-right: min(5vw, 90px);
+	margin-top: min(2vw, 20px);
+	margin-bottom: min(2vw, 50px);
+
 
 	/*border: 5px solid #408080; /* good for debugging tiles */
 	overflow:hidden;
